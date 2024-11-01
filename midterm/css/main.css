@@ -83,33 +83,41 @@ header h1 {
     color: white;
     font-size: 48px;
     margin: 0;
+    font-weight: bold;
 }
 
 h2, h3 {
     color: #000000;
     font-size: 36px;
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 35px;
 }
 
 .navigation-list {
     display: flex;
-    text-decoration: none;
+    background-color: #d4e9e7;
     justify-content: center;
+    text-decoration: none;
     color: black;
-    gap: 2rem;
-    padding: 0;
-    margin: 0px 40px;
+
     font-size: 24px;
+    text-align: center;
 }
 
-nav ul li {
-    padding: 0. 3.5;
-    position: relative;
+.navigation-list a {
+    color: black;
+    text-decoration: none;
+    padding: 85px;
+
 }
 
 nav ul li:not(:last-child) {
     border-right: 1px solid #000000;
+    padding: 15px 0 15px 0;
+}
+
+nav ul li:last-child {
+    padding: 15px 0 15px 0;
 }
 
 /* Main Section */
@@ -117,7 +125,7 @@ nav ul li:not(:last-child) {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     background-color: #d4e9e7;
 }
 
@@ -168,10 +176,16 @@ form input, form textarea {
 }
 
 .radio-group {
-    display: flex; 
-    gap: 1rem;
-    margin-bottom: 1rem;
-    
+    display: inline-flex;
+    margin: 10px 0 5px 0;
+    gap: 10px; 
+}
+
+button {
+display: flex;
+ border: 1px solid #000000;
+ background-color: #d4e9e7;
+ padding: 12px 12px;
 }
 
 /* Footer Styling */
@@ -185,5 +199,3 @@ form input, form textarea {
     color: black;
     box-sizing: border-box;
 }
-
-
