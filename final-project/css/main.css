@@ -48,8 +48,398 @@ table {
 	border-spacing: 0;
 }
 
-/* ======== My CSS ============== */
 
-table {
-    border: 1px black;
+
+/*------------------MY CSS----------------------*/
+
+
+body {
+    font-family: "Open Sans", sans-serif;
 }
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+    /* 2 (16px) = 32px */
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+section {
+    margin: 60px 0;
+}
+
+
+
+/* ----------- Header ------------------*/
+
+
+
+header {
+    background-color: rgb(34, 34, 34);
+	display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+	padding: 10px;
+}
+
+
+.banner {
+    background-repeat: no-repeat;
+	background-color: rgb(198, 141, 0);
+	width: 100%;
+
+	}
+
+	.banner img {
+	position: initial ;
+	width: min-content;
+	float: left;
+	}
+
+
+nav {
+	width: 100%;
+	}
+
+	nav ul li a {
+    display: block;
+    color:rgb(198, 141, 0);
+    text-decoration: none;
+    padding:  18px 0;
+	}
+
+	nav ul li a:hover {
+    background-color: rgb(198, 141, 0);
+	color: rgb(10, 10, 10);
+	}
+
+
+.search-container {
+	width: 100%;
+	height: 4vh;
+	display: flex;
+	}
+
+	#search-box {
+		width: 90%;
+	}
+
+	#search-button {
+		background:  rgb(34, 34, 34);
+		color: rgb(198, 141, 0);
+		border-color:rgb(198, 141, 0);
+		width: 10%;
+	}
+
+	.fa-search {
+			background-color:  rgb(34, 34, 34);
+			color: rgb(198, 141, 0);
+			border: none;
+			border-color: rgb(198, 141, 0);
+			cursor: pointer;
+			margin: 0;
+			font-size: 15px;
+	}
+
+
+
+
+
+
+
+	
+	
+
+/* -------- Story Selection ----------- */
+
+.story-section .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*------------------------- Values Section -----------------------*/
+
+.values-section .values {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.values-section .values .value {
+    background-color: beige;
+    padding: 20px;
+    display: flex;
+    flex-direction: column
+}
+
+.values-section .values .value h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+
+/* ------------------------------ Gallery Section --------------------------- */
+
+.gallery-btn {
+	background-color: beige;
+	color: black;
+	text-decoration: none;
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 30px;
+
+}
+
+
+.gallery-btn:hover, .gallery-btn:focus {
+background-color: pink;
+
+}
+
+
+
+.gallery.story-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-section .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.gallery-section .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures images cover the grid item area */
+}
+
+.gallery-section .images img:nth-child(3) {
+    grid-column: 1 / span 2 ;
+    grid-row: 2 / span 2;
+}
+
+.gallery-section .videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10 px;
+}
+
+.gallery-section .videos iframe {
+    width: 100%;
+    height: 400px;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+.location-section .map iframe {
+    width: 100%;
+    height: 400px;
+    gap: 10px;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-info .social-icons a {
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+/*----------------- Form Input ---------------------*/
+/*
+form input, form textarea {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #a5a5a5;
+    border-radius: 5px;
+}
+
+*/
+/*---------------- Tablet Style -------------------------*/
+
+@media screen and (min-width: 720px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    
+    nav ul li {
+        width: 100%
+    }
+    
+    .story-section .content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+.story-section .content img {
+    width: 300px;
+}
+
+/*---------------- Tablet Style Gallery-------------------------*/
+
+
+    .gallery-section .images {
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+
+    .gallery-section .images img:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        /* initial reset values to their default values */
+    }
+
+    .gallery-section .images img:nth-child(2) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        /* initial reset values to their default values */
+    }
+
+    .gallery-section .images img:nth-child(3) {
+        grid-column: initial;
+        grid-row: initial;
+        /* initial reset values to their default values */
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 30px 0;
+    }
+
+}
+
+
+/* ------------- DESKTOP STYLE ------------ */
+
+@media screen and (min-width: 1080px) {
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2.0rem;
+    }
+
+    h3{
+        font-size: 1.75rem;
+    }
+
+
+    .values-section {
+        flex-direction: row;
+    }
+
+    .values-section .values .value {
+        flex-direction: column;
+    }
+
+    /* ------------- DESKTOP STYLE: Gallery ------------ */
+
+
+    .gallery-section .images {
+        grid-template-columns: repeat (4, 1fr);
+    
+    }
+    
+
+    .gallery-section .images {
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+
+    .gallery-section .images img:nth-child(1) {
+        grid-column: initial;
+        grid-row: initial;
+        /* initial reset values to their default values */
+    }
+
+    .gallery-section .images img:nth-child(2) {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        /* initial reset values to their default values */
+    }
+
+    .gallery-section .images img:nth-child(3) {
+        grid-column: initial;
+        grid-row: initial;
+        /* order: -1; /*
+        /* initial reset values to their default values */
+    }
+    
+    .gallery-section .images img:nth-child(4) {
+        order:  5;
+        /* positive # as well as negative #
+        order: -1; move image to the left
+        order: 1; move image to the right
+        the larger the value the further it will be placed to the right; while a smaller value places it further to the left */
+    }
+    
+    
+}
+    
