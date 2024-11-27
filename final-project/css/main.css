@@ -168,13 +168,10 @@ nav {
 	}
 
 
+/* ----------- Hero Message And Banner ------------------*/
 
 
 
-
-
-	
-	
 
 /* -------- Story Selection ----------- */
 
@@ -206,6 +203,11 @@ nav {
 
 
 /* ------------------------------ Gallery Section --------------------------- */
+
+
+/*
+
+
 
 .gallery-btn {
 	background-color: beige;
@@ -242,7 +244,7 @@ background-color: pink;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures images cover the grid item area */
+    /* Ensures images cover the grid item area 
 }
 
 .gallery-section .images img:nth-child(3) {
@@ -262,7 +264,7 @@ background-color: pink;
     gap: 10px;
 }
 
-
+*/
 
 
 
