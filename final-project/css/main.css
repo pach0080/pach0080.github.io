@@ -71,9 +71,10 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     /* 2 (16px) = 32px */
-    margin: 20px 0;
+    margin-bottom: 20px;
+    line-height: 14vw;
 }
 
 h2 {
@@ -83,14 +84,11 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+    margin-bottom: 1vh;
 }
 
 p {
     line-height: 1.5;
-}
-
-section {
-    margin: 60px 0;
 }
 
 
@@ -170,6 +168,75 @@ nav {
 
 /* ----------- Hero Message And Banner ------------------*/
 
+section .hero-banner {
+    color: white;
+    background-image: url("../images/main-banner.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    /*height: 50vh;*/
+    padding: 40px 0px;
+    width: 100%;
+}
+
+.title-overlay {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 6vh 2vw;
+
+}
+
+section .title-overlay p {
+    margin-bottom: 40px;
+    font-size: 0.6rem;
+}
+
+.hero-btn {
+    background-color: rgb(198, 141, 0);
+    color: black;
+    text-decoration: none;
+    padding: 3vh 3vh;
+    border-radius: 1px;
+    
+    
+}
+
+/*-------About Us--------------*/
+
+#about {
+    background-color: #ffe6ac;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+#about p {
+    font-size: 0.7rem;
+}
+
+/*-------Our Services--------------*/
+
+.services {
+    background-color: #ffe6ac;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    margin-bottom: 1vh;
+}
+
+.services p {
+    font-size: 0.7rem;;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    margin-bottom: 1vh;
+
+}
+.services-btn {
+    background-color: #222222;
+    color: white;
+    text-decoration: none;
+    padding: 3vh 3vh;
+    border-radius: 1px;
+}
 
 
 
