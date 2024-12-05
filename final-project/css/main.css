@@ -152,7 +152,7 @@ nav {
 		background:  rgb(34, 34, 34);
 		color: rgb(198, 141, 0);
 		border-color:rgb(198, 141, 0);
-		width: 10%;
+		/* width: 20px; */
 	}
 
 	.fa-search {
@@ -163,6 +163,7 @@ nav {
 			cursor: pointer;
 			margin: 0;
 			font-size: 15px;
+            padding: 0px 4px;
 	}
 
 
@@ -196,9 +197,15 @@ section .title-overlay p {
     text-decoration: none;
     padding: 3vh 3vh;
     border-radius: 1px;
-    
+}
+
+/*----------------Wrapper----------------*/
+
+.wrapper {
+    border: 10px solid white;
     
 }
+
 
 /*-------About Us--------------*/
 
@@ -216,21 +223,25 @@ section .title-overlay p {
 
 .services {
     background-color: #ffe6ac;
-    padding-left: 1vh;
-    padding-right: 1vh;
-    padding-top: 3vh;
     padding-bottom: 5vh;
     margin-bottom: 1vh;
 }
 
+.services h3 {
+    margin: 1vh;
+    margin-top: 2vh;
+}
+
+
 .services p {
-    font-size: 0.7rem;;
+    margin: 1vh;
+    font-size: 0.7rem;
     padding-top: 2vh;
     padding-bottom: 4vh;
-    margin-bottom: 1vh;
-
 }
+
 .services-btn {
+    margin: 1vh;
     background-color: #222222;
     color: white;
     text-decoration: none;
@@ -238,117 +249,138 @@ section .title-overlay p {
     border-radius: 1px;
 }
 
+/* -------- Our Vision ---------- */
 
-
-/* -------- Story Selection ----------- */
-
-.story-section .content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/*------------------------- Values Section -----------------------*/
-
-.values-section .values {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.values-section .values .value {
-    background-color: beige;
-    padding: 20px;
-    display: flex;
-    flex-direction: column
-}
-
-.values-section .values .value h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-}
-
-
-/* ------------------------------ Gallery Section --------------------------- */
-
-
-/*
-
-
-
-.gallery-btn {
-	background-color: beige;
-	color: black;
-	text-decoration: none;
-	padding: 10px 20px;
-	font-weight: bold;
-	border-radius: 30px;
-
-}
-
-
-.gallery-btn:hover, .gallery-btn:focus {
-background-color: pink;
-
-}
-
-
-
-.gallery.story-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.gallery-section .images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-
-}
-
-.gallery-section .images img {
+section .ourvision-banner {
+    color: white;
+    background-image: url("../images/vision.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    padding: 0px 0px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures images cover the grid item area 
 }
 
-.gallery-section .images img:nth-child(3) {
-    grid-column: 1 / span 2 ;
-    grid-row: 2 / span 2;
+.ourvision-overlay {
+    width: 100%;
+    padding: 6vh 2vw;
+
 }
 
-.gallery-section .videos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10 px;
+section .ourvision-overlay p {
+    margin-bottom: 40px;
+    font-size: 0.6rem;
 }
 
-.gallery-section .videos iframe {
+.learnmore-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(198, 141, 0);
+    color: white;
+    text-decoration: none;
+    padding: 3vh 3vh;
+    border-radius: 1px;
+    
+    
+}
+
+/* -------- Our Team ----------- */
+
+.our-team {
+    background-color: #ffe6ac;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+}
+
+.our-team h3 {
+    margin: 1vh;
+}
+.our-team h4 {
+    font-weight: bold;
+    font-size: 0.75rem;
+    position: relative;
+    margin: 1vh;
+}
+
+.our-team h4::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(198, 141, 0);
+    margin-top: 5px;
+}
+
+.our-team p {
+    font-size: 0.7rem;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 1vh;
+}
+
+/*----------------- Contact Us ---------------------*/
+
+form input, form textarea {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #666666;
+    border-radius: 5px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #222222;
+    color: rgb(198, 141, 0);
+    text-decoration: none;
+    padding: 8px 8px;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+
+}
+
+/* ----------------------- Hours of Operartion --------------------- */
+
+.operation-hours {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.operation-hours th, .operation-hours td {
+    border: 1px solid black;
+    text-align: center; 
+    padding: 20px; 
+}
+
+.operation-hours th {
+    background-color: #ffe6ac;
+}
+
+.operation-hours tbody tr:nth-child(1) td,
+.operation-hours tbody tr:nth-child(2) td {
+    text-align: left;
+}
+
+
+/* ---------- Location -------------- */
+iframe {
     width: 100%;
     height: 400px;
     gap: 10px;
-}
-
-*/
-
-
-
-
-
-
-.location-section .map iframe {
-    width: 100%;
-    height: 400px;
-    gap: 10px;
 
 }
+
+/* ----------- Footer -------------*/
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 30px 0;
+    background-color: rgb(34, 34, 34);
+    color: rgb(198, 141, 0);
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin-top: 10px;
 }
 
 .footer-info {
@@ -358,30 +390,6 @@ footer {
     align-items: center;
 }
 
-.footer-info .social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.footer-info .social-icons a {
-    color: white;
-    font-size: 18px;
-}
-
-
-
-
-/*----------------- Form Input ---------------------*/
-
-form input, form textarea {
-    width: 100%; 
-    box-sizing: border-box; 
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #a5a5a5;
-    border-radius: 5px;
-}
 
 
 /*---------------- Tablet Style -------------------------*/
