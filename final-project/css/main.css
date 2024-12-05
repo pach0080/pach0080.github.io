@@ -95,7 +95,10 @@ p {
 
 /* ----------- Header ------------------*/
 
-
+body .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
 header {
     background-color: rgb(34, 34, 34);
@@ -182,19 +185,28 @@ section .hero-banner {
 .title-overlay {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 6vh 2vw;
+    padding: 6vh 0vw;
 
 }
 
 section .title-overlay p {
+    margin-left: 2vh;
+    margin-right: 2vh;
     margin-bottom: 40px;
     font-size: 0.6rem;
+}
+
+section h1 {
+    margin-left: 2vh;
+    margin-right: 2vh;
 }
 
 .hero-btn {
     background-color: rgb(198, 141, 0);
     color: black;
     text-decoration: none;
+    margin-left: 2vh;
+    margin-right: 2vh;
     padding: 3vh 3vh;
     border-radius: 1px;
 }
@@ -392,9 +404,30 @@ footer {
 
 
 
-/*---------------- Tablet Style -------------------------*/
+/*---------------- Tablet Desktop Style -------------------------*/
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 760px) {
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2.0rem;
+    }
+
+    h3{
+        font-size: 1.75rem;
+    }
+
+
+    .values-section {
+        flex-direction: row;
+    }
+
+    .values-section .values .value {
+        flex-direction: column;
+    }
 
     nav ul {
         display: flex;
@@ -415,6 +448,8 @@ footer {
 .story-section .content img {
     width: 300px;
 }
+
+
 
 /*---------------- Tablet Style Gallery-------------------------*/
 
@@ -442,11 +477,6 @@ footer {
         /* initial reset values to their default values */
     }
     
-    footer {
-        background-color: #333;
-        color: white;
-        padding: 30px 0;
-    }
 
 }
 
