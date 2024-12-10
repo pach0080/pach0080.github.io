@@ -262,6 +262,15 @@ section h1 {
     padding-bottom: 4vh;
 }
 
+.services-btn1 {
+    margin: 1vh;
+    background-color: #222222;
+    color: white;
+    text-decoration: none;
+    padding: 3vh 3vh;
+    border-radius: 1px;
+}
+
 .services-btn {
     margin: 1vh;
     background-color: #222222;
@@ -632,6 +641,19 @@ footer {
                 padding-bottom: 10px;
             }
             
+            .services-btn1 {
+                font-size: 22px;
+                display: block;         
+                width: 96%;            
+                text-align: center;     
+                background-color: #222; 
+                color: white;           
+                text-decoration: none;  
+                border-radius: 1px;
+                padding: 36px 0;
+                margin: 10px 10px;
+            }
+
             .services-btn {
                 font-size: 22px;
                 display: block;         
@@ -776,4 +798,120 @@ footer {
             grid-area: bob-img;
         }
 
+
+        /*------------ Contact Us ----------------*/
+
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+                "contact map"
+                "hours hours";
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+        
+        .contact-container {
+            grid-area: contact;
+            background-color: #fff;
+            border-radius: 2px;
+        }
+        
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        
+        .contact-container input, 
+        .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-container textarea {
+            height: 110px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            text-align: center;
+            padding: 10px 15px;
+            background-color: #222222;
+            color: rgb(198, 141, 0);
+            border-radius: 1px;
+            text-decoration: none;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+        
+        .contact-btn:hover {
+            background-color: rgb(198, 141, 0);
+            color: #222222; 
+        }
+        
+        .google-map {
+            grid-area: map;
+            background-color: #fff;
+
+        }
+
+       
+        .google-map iframe {
+            width: 100%;
+
+        }
+        
+        .hours-section {
+            grid-area: hours;
+            background-color: #fff;
+        }
+
+        .google-map h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            }
+        
+
+        .contact-container h3 {
+           font-size: 30px;
+           margin-bottom: 20px;
+        }
+        
+        .hours-section h3 {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+
+        .hours-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .hours-section th, 
+        .hours-section td {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        
+        .hours-section th {
+            background-color: #ffe6ac;
+            color: black;
+        }
+
+
+        /*------------ Footer ----------------*/
+
+        footer p {
+            margin-left: 360px;
+        }
  }
