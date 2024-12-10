@@ -53,6 +53,8 @@ table {
 /*------------------MY CSS----------------------*/
 
 
+/*---Basic attributes for my own standards, these will chane a lot during the code but are the base values that I started with---*/
+
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -72,7 +74,6 @@ h1, h2, h3 {
 
 h1 {
     font-size: 3rem;
-    /* 2 (16px) = 32px */
     margin-bottom: 20px;
     line-height: 14vw;
 }
@@ -94,6 +95,10 @@ p {
 
 
 /* ----------- Header ------------------*/
+
+/*---The hover is the same color as the banner to create better consistency and a nicer look
+        We use float on the banner for it to stick in position---*/
+
 
 body .container {
     max-width: 1200px;
@@ -155,7 +160,6 @@ nav {
 		background:  rgb(34, 34, 34);
 		color: rgb(198, 141, 0);
 		border-color:rgb(198, 141, 0);
-		/* width: 20px; */
 	}
 
 	.fa-search {
@@ -172,12 +176,15 @@ nav {
 
 /* ----------- Hero Message And Banner ------------------*/
 
+/*---We work with responsive friendly units on the mobile version for added value in between possible mobile screens.... 
+
+Please note that these values will change to pixels when we switch to our desktop version since we have a predefined container of 1200px---*/
+
 section .hero-banner {
     color: white;
     background-image: url("../images/main-banner.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    /*height: 50vh;*/
     padding: 40px 0px;
     width: 100%;
 }
@@ -213,17 +220,20 @@ section h1 {
 
 /*----------------Wrapper----------------*/
 
-.wrapper-1 {
+/*Even though it would be more optimal to have these wrappers in the same group, for visual clarity I prefer them separated for anyone particulary interested */
+
+
+.wrapper-services {
     border: 10px solid white;
     
 }
 
-.wrapper-2 {
+.wrapper-team {
     border: 10px solid white;
     
 }
 
-.wrapper-3 {
+.wrapper-contact {
     border: 10px solid white;
     
 }
@@ -243,6 +253,11 @@ section h1 {
 
 /*-------Our Services--------------*/
 
+/*We use the a element for all the buttons to preserve visual precision between the mock-up and the assignment
+-btn is a abbreviation for button
+-there are 2 classes of buttons for extra precision when creating responsiveness (check media query ahead), */
+
+
 .services {
     background-color: #ffe6ac;
     padding-bottom: 5vh;
@@ -261,6 +276,8 @@ section h1 {
     padding-top: 2vh;
     padding-bottom: 4vh;
 }
+
+/*both btn are exactly the same*/
 
 .services-btn1 {
     margin: 1vh;
@@ -287,7 +304,7 @@ section .ourvision-banner {
     background-image: url("../images/vision.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; /* Used this property to make it exactly like the mock-up */
     margin-top: 20px;
     width: 100%;
 }
@@ -337,6 +354,8 @@ section .ourvision-overlay p {
     position: relative;
     margin: 1vh;
 }
+
+/*I loved this yellow line */
 
 .content h4::after {
     content: '';
@@ -395,6 +414,8 @@ form input, form textarea {
     background-color: #ffe6ac;
 }
 
+/*A little overkill but ensured the alignment will always be on point*/
+
 .operation-hours tbody tr:nth-child(1) td,
 .operation-hours tbody tr:nth-child(2) td {
     text-align: left;
@@ -402,6 +423,7 @@ form input, form textarea {
 
 
 /* ---------- Location -------------- */
+
 iframe {
     width: 100%;
     height: 400px;
@@ -410,6 +432,8 @@ iframe {
 }
 
 /* ----------- Footer -------------*/
+
+/*Unsplash text It will redirect you to Unsplash if the link is touched*/
 
 footer {
     background-color: rgb(34, 34, 34);
@@ -443,40 +467,32 @@ footer {
         padding-bottom: 30px;
     }
 
+/*Had to make it smaller*/
     .banner {
-        background-repeat: no-repeat;
         width: 10%;
         margin: 0px 60px;
-    
-        }
-    
-        .banner img {
-        position: initial ;
-        width: min-content;
-        float: left;
-        }
- 
+    }
 
+/*Switched display to flex to allow an horizontal distribution*/
     nav {
         display: flex;
         padding-bottom: 0;
         align-items: center;
+    }
 
-        
-      }
-      
     nav li {
         margin: 2px;
     }
 
     nav ul {
         list-style: none;
-        margin-left: -25px ;
-        margin-right: 20px ;
+        margin-left: -25px;
+        margin-right: 20px;
         padding: 0;
         display: flex;
         align-items: center;
     }
+
     nav ul li a {
         display: block;
         color: #c78c06;
@@ -485,7 +501,7 @@ footer {
         text-decoration: none;
         font-size: 20px;
     }
-      
+
     nav a:hover {
         background-color: #ffe6ac;
         color: #c78c06;
@@ -496,422 +512,418 @@ footer {
         height: 40px;
         display: flex;
         margin-right: 80px;
-        }
+    }
 
+    /*----------- Hero Banner - Welcome ---------------------*/
+/*Switched to only pixel units*/
 
-        /*--------------------------------*/
+    h1 {
+        font-size: 70px;
+        line-height: 100px;
+    }
 
-        
-        
-        h1 {
-            font-size: 70px;
-            line-height: 100px;
-        }
+    section h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
-        section h1 {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        section .hero-banner {
-            color: white;
-            background-image: url("../images/main-banner.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            /*height: 50vh;*/
-            padding: 40px 0px;
-            
-        }
+    section .hero-banner {
+        color: white;
+        background-image: url("../images/main-banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 40px 0px;
+    }
 
     .title-overlay {
-            width: 88%;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 0 0;
-            padding-bottom: 50px;
-            padding-top: 50px;
-            margin-left: 100px;
-            margin-right: 0;
-            
-        
-        }
+        width: 88%;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 50px 0;
+        margin-left: 100px;
+    }
 
-        section .title-overlay p {
-            margin-left: 20px;
-            margin-right: 20px;
-            margin-bottom: 40px;
-            font-size: 15px;
-        }
+    section .title-overlay p {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        font-size: 15px;
+    }
 
-        .hero-btn {
-            background-color: rgb(198, 141, 0);
-            color: black;
-            text-decoration: none;
-            margin-left: 20px;
-            margin-right: 20px;
-            padding: 30px 30px;
-            border-radius: 1px;
-        }
+    .hero-btn {
+        background-color: rgb(198, 141, 0);
+        color: black;
+        text-decoration: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 30px 30px;
+        border-radius: 1px;
+    }
 
+    /*---------------- About Us ---------------*/
 
-        /*---------------- About Us ---------------*/
+    #about {
+        background-color: #ffe6ac;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
 
-        #about {
-            background-color: #ffe6ac;
-            padding: 10px;
-            padding-bottom: 30px;
-        }
-        
-        #about img {
-            float: left;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 500px;
-            height: 250px;
-            padding-left: 60px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-left: 30px;
-            margin-right: 10px;
-            
-        }
+    #about img {
+        float: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 500px;
+        height: 250px;
+        padding-left: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 30px;
+        margin-right: 10px;
+    }
 
-        #about p {
-            display: flex;
-            font-size: 14px;
-            margin-top: 10px;
-            margin-right: 70px;
-        }
+    #about p {
+        display: flex;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-right: 70px;
+    }
 
-        #about h2 {
-            display: flex;
-        }
+    #about h2 {
+        display: flex;
+    }
 
-        /*---------------------- Our Services -------------------*/
+    /*---------------------- Our Services -------------------*/
 
-        .wrapper-1 {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            padding-left: 80px;
-            padding-right: 80px;
-        }
-        
-        h2 {
-            font-size: 50px;
-        }
+/*We switch to a grid display for this section only, though a little more rigid
+than areas, it was a more comfortable choice since the elements are nicely grouped and barely vary in their dimensions
+Also .wrapper-services switches to flex for added flexibility when creating the grid*/
 
-        .services-grid {
-            display: grid;
-            gap: 12px;
-            height: 1150px;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-            margin-bottom: 8vh;
+    .wrapper-services {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 
-        }
-            .services:nth-child(1),
-            .services:nth-child(2) {
-                grid-column: span 3;
-            }
-        
-            .services:nth-child(3),
-            .services:nth-child(4),
-            .services:nth-child(5) {
-                grid-column: span 2;
-            }
+    h2 {
+        font-size: 50px;
+    }
 
-            .services {
-                background-color: #ffe6ac;
-                padding-bottom: 4px;
-            }
-            
-            .services h3 {
-                font-size: 28px;
-                margin: 10px;
-                margin-top: 40px;
-            }
-            
-            
-            .services p {
-                margin: 10px;
-                font-size: 14px;
-                padding-top: 20px;
-                padding-bottom: 10px;
-            }
-            
-            .services-btn1 {
-                font-size: 22px;
-                display: block;         
-                width: 96%;            
-                text-align: center;     
-                background-color: #222; 
-                color: white;           
-                text-decoration: none;  
-                border-radius: 1px;
-                padding: 36px 0;
-                margin: 10px 10px;
-            }
+    .services-grid {
+        display: grid;
+        gap: 12px;
+        height: 1150px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 9vh;
+    }
 
-            .services-btn {
-                font-size: 22px;
-                display: block;         
-                width: 94%;            
-                text-align: center;     
-                background-color: #222; 
-                color: white;           
-                text-decoration: none;  
-                border-radius: 1px;
-                padding: 36px 0;
-                margin: 10px 10px;
-            }
-        
-        
+    .services:nth-child(1),
+    .services:nth-child(2) {
+        grid-column: span 3;
+    }
 
-        /*----------------- Our Vision ------------------*/
-        
-        section .ourvision-banner {
-            color: white;
-            background-image: url("../images/vision.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-top: 20px;
-            width: 100%;
-        }
+    .services:nth-child(3),
+    .services:nth-child(4),
+    .services:nth-child(5) {
+        grid-column: span 2;
+    }
 
-        .ourvision-overlay h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-        
-        .ourvision-overlay {
-            width: 100%;
-            padding-bottom: 50px;
-            padding-top: 30px;
-            padding-left: 100px;
-            padding-right: 100px;
-        
-        }
-        
-        section .ourvision-overlay p {
-            margin-bottom: 40px;
-            padding-right: 100px;
-            font-size: 14px;
-        }
-        
-        .learnmore-btn {
-            background-color: rgba(0, 0, 0, 0.6);
-            border: 1px solid rgb(198, 141, 0);
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-            padding: 30px 32px;
-            border-radius: 1px;
-            
-            
-        }
+    .services {
+        background-color: #ffe6ac;
+        padding-bottom: 4px;
+    }
 
+    .services h3 {
+        font-size: 28px;
+        margin: 10px;
+        margin-top: 40px;
+    }
 
-        /*------------ Our Team ----------------*/
+    .services p {
+        margin: 10px;
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
 
-        .ourteam-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas:
-                "john-img john-content"
-                "bob-content bob-img";
-            max-width: 1200;
-        }
+    .services-btn1 {
+        font-size: 22px;
+        display: block;
+        width: 96%;
+        text-align: center;
+        background-color: #222;
+        color: white;
+        text-decoration: none;
+        border-radius: 1px;
+        padding: 36px 0;
+        margin: 10px 10px;
+    }
 
-        .john-img {
-            display: block;
-            background-color: #ffe6ac;
-            margin-top: 1px;
-            margin-bottom: 0;
-        }
+    .services-btn {
+        font-size: 22px;
+        display: block;
+        width: 94%;
+        text-align: center;
+        background-color: #222;
+        color: white;
+        text-decoration: none;
+        border-radius: 1px;
+        padding: 36px 0;
+        margin: 10px 10px;
+    }
 
-        .bob-img {
-            display: block;
-            background-color: #ffe6ac;
-            padding-bottom: 0;
-        }
-    
-        .john-content {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
+    /*----------------- Our Vision ------------------*/
+/*Remember Our Vision doesn't have a wrapper applied to it, this section was the main reason we have more than one wrapper*/
 
-        .bob-content {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-    
+    section .ourvision-banner {
+        color: white;
+        background-image: url("../images/vision.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 20px;
+        width: 100%;
+    }
 
-        .content h3 {
-            margin: 1vh;
-            font-size: 40px;
-        }
-        .content h4 {
-            font-weight: bold;
-            font-size: 20px;
-            position: relative;
-            margin: 1vh;
-        }
-        
-        
-        .content p {
-            font-size: 16px;
-            padding-top: 1vh;
-            padding-bottom: 1vh;
-            margin: 1vh;
-        }
-        
-        .image img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .content {
-            background-color: #ffe6ac;
-            padding: 10px;
-            text-align: left;
-            margin-bottom: 1px;
-            margin-top: 1px;
-        }
-        
-        .john-img {
-            grid-area: john-img;
-        }
-        
-        .john-content {
-            grid-area: john-content;
-        }
-        
-        .bob-content {
-            grid-area: bob-content;
-        }
-        
-        .bob-img {
-            grid-area: bob-img;
-        }
+    .ourvision-overlay h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .ourvision-overlay {
+        width: 100%;
+        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    section .ourvision-overlay p {
+        margin-bottom: 40px;
+        padding-right: 100px;
+        font-size: 14px;
+    }
+
+    .learnmore-btn {
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgb(198, 141, 0);
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        padding: 30px 32px;
+        border-radius: 1px;
+    }
+
+    /*------------ Our Team ----------------*/
+
+/*What a headache! Hahahaha, the use of grid areas was fundamental to the success of this layout, since we are messing with the logic
+of how HTML layouts by default when we code, super practical and had to rethink how my divs worked, creating 2 new divs to separate the images and the content*/
+
+    .wrapper-team {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 
 
-        /*------------ Contact Us ----------------*/
+    .ourteam-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "john-img john-content"
+            "bob-content bob-img";
+        max-width: 1200px;
+    }
 
+    .john-img {
+        display: block;
+        background-color: #ffe6ac;
+        margin-top: 1px;
+        margin-bottom: 0;
+    }
 
-        
-        .grid-container {
-            display: grid;
-            grid-template-areas: 
-                "contact map"
-                "hours hours";
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-top: 60px;
-        }
-        
-        .contact-container {
-            grid-area: contact;
-            background-color: #fff;
-            border-radius: 2px;
-        }
-        
-        .contact-container form {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-        
-        
-        .contact-container input, 
-        .contact-container textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    .bob-img {
+        display: block;
+        background-color: #ffe6ac;
+        padding-bottom: 0;
+    }
 
-        .contact-container textarea {
-            height: 110px;
-        }
-        
-        .contact-btn {
-            display: inline-block;
-            text-align: center;
-            padding: 10px 15px;
-            background-color: #222222;
-            color: rgb(198, 141, 0);
-            border-radius: 1px;
-            text-decoration: none;
-            cursor: pointer;
-            align-self: flex-start;
-        }
-        
-        .contact-btn:hover {
-            background-color: rgb(198, 141, 0);
-            color: #222222; 
-        }
-        
-        .google-map {
-            grid-area: map;
-            background-color: #fff;
+    .john-content {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
-        }
+    .bob-content {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
-       
-        .google-map iframe {
-            width: 100%;
+    .content h3 {
+        margin: 1vh;
+        font-size: 40px;
+    }
 
-        }
-        
-        .hours-section {
-            grid-area: hours;
-            background-color: #fff;
-        }
+    .content h4 {
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+        margin: 1vh;
+    }
 
-        .google-map h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            }
-        
+    .content {
+        background-color: #ffe6ac;
+        padding: 10px;
+        text-align: left;
+        margin-bottom: 1px;
+        margin-top: 1px;
+    }
+    .content p {
+        font-size: 16px;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        margin: 1vh;
+    }
 
-        .contact-container h3 {
-           font-size: 30px;
-           margin-bottom: 20px;
-        }
-        
-        .hours-section h3 {
-            font-size: 30px;
-            margin-top: 10px;
-        }
+    .image img {
+        width: 100%;
+        height: auto;
+    }
 
+    .john-img {
+        grid-area: john-img;
+    }
 
-        .hours-section table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        .hours-section th, 
-        .hours-section td {
-            border: 1px solid #000;
-            padding: 20px;
-        }
-        
-        .hours-section th {
-            background-color: #ffe6ac;
-            color: black;
-        }
+    .john-content {
+        grid-area: john-content;
+    }
 
+    .bob-content {
+        grid-area: bob-content;
+    }
 
-        /*------------ Footer ----------------*/
+    .bob-img {
+        grid-area: bob-img;
+    }
 
-        footer p {
-            margin-left: 360px;
-        }
- }
+    /*------------ Contact Us ----------------*/
+
+    /*Another headache! The use of grid areas was fundamental again, practice makes perfect, and eventually we arrived to our solution!
+    We kept the footer out of DIV Container so it could fill the bottom of our page in the desktop version*/
+
+    .wrapper-contact {
+        padding: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+            "contact map"
+            "hours hours";
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+
+    .contact-container {
+        grid-area: contact;
+        background-color: #fff;
+        border-radius: 2px;
+    }
+
+    .contact-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .contact-container input, 
+    .contact-container textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .contact-container textarea {
+        height: 110px;
+    }
+
+    .contact-btn {
+        display: inline-block;
+        text-align: center;
+        padding: 10px 15px;
+        background-color: #222222;
+        color: rgb(198, 141, 0);
+        border-radius: 1px;
+        text-decoration: none;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+
+    .contact-btn:hover {
+        background-color: rgb(198, 141, 0);
+        color: #222222;
+    }
+
+    .google-map {
+        grid-area: map;
+        background-color: #fff;
+    }
+
+    .google-map iframe {
+        width: 100%;
+    }
+
+    .hours-section {
+        grid-area: hours;
+        background-color: #fff;
+    }
+
+    .google-map h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .contact-container h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .hours-section h3 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .hours-section table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .hours-section th, 
+    .hours-section td {
+        border: 1px solid #000;
+        padding: 20px;
+    }
+
+    .hours-section th {
+        background-color: #ffe6ac;
+        color: black;
+    }
+
+    /*------------ Footer ----------------*/
+
+    footer p {
+        margin-left: 23vw
+    }
+}
